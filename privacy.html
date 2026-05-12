@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — lazyCal</title>
+<style>
+:root { --bg:#fff; --surface:#f5f5f7; --text:#1c1c1e; --muted:#6c6c70; --accent:#5e9eff; }
+@media (prefers-color-scheme: dark) { :root { --bg:#000; --surface:#1c1c1e; --text:#fff; --muted:#98989d; } }
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:32px 20px 64px}
+nav{font-size:14px;margin-bottom:16px}
+nav a{color:var(--accent);text-decoration:none;margin-right:16px}
+nav a:hover{text-decoration:underline}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-0.02em}
+.subtitle{color:var(--muted);font-size:13px;margin:0 0 24px}
+section{background:var(--surface);border-radius:12px;padding:20px;margin-bottom:16px}
+h2{font-size:16px;color:var(--accent);margin:0 0 12px;font-weight:600}
+p,li{color:var(--muted);font-size:15px}
+p{margin:0 0 12px}
+p:last-child{margin-bottom:0}
+ul{margin:0 0 12px;padding-left:20px}
+li{margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+<h1>Privacy Policy</h1>
+<p class="subtitle">Effective Date: 2026-05-12 • Last Updated: 2026-05-12</p>
+
+<section>
+<h2>1. Introduction</h2>
+<p>lazyCal is operated by Ali Hassan Allawi, an independent developer based in the United Arab Emirates ("we," "our," or "us"). This Privacy Policy explains what information lazyCal collects, how it is used, where it is stored, and the rights you have over it. Please read it carefully. If you do not agree with the practices described here, please discontinue use of the App.</p>
+<p>We apply the protections described below — including the rights set out in Section 7 — to every user, regardless of where you live. This is a deliberate choice: it keeps one policy, one promise, one standard.</p>
+</section>
+
+<section>
+<h2>2. Information We Collect</h2>
+<p>Account information: your email address and a securely hashed password when you create an account.</p>
+<p>Health &amp; profile data you enter during onboarding or in Settings:</p>
+<ul>
+<li>Gender</li>
+<li>Date of birth (used to derive your age)</li>
+<li>Height</li>
+<li>Weight history (every entry, plus your current weight)</li>
+<li>Activity level</li>
+<li>Dietary preferences and special considerations</li>
+<li>Calorie estimation bias (under / neutral / over)</li>
+<li>Goal weight, target date, and goal strategy</li>
+<li>Daily calorie and macronutrient targets</li>
+<li>Micronutrient targets</li>
+</ul>
+<p>Meal logs: the free-text descriptions you type or dictate, plus the resolved nutritional values for each meal.</p>
+<p>Apple Health data (optional): if you enable the Apple Health integration, lazyCal may read body mass and active energy data from Apple HealthKit. You can revoke this at any time in iOS Settings.</p>
+<p>Diagnostic data: we do not run any third-party analytics or tracking. The only diagnostic data we receive is Apple's standard crash reports — and only if you have opted in to share them with developers under iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share With App Developers.</p>
+</section>
+
+<section>
+<h2>3. How We Use Your Information</h2>
+<p>We use your information to:</p>
+<ul>
+<li>Provide the App's core features: logging meals, resolving them against nutrition databases, tracking your daily totals, and showing your goals.</li>
+<li>Personalise your calorie and macronutrient targets using your health profile.</li>
+<li>Diagnose crashes and bugs, when Apple's anonymised crash reports indicate a problem.</li>
+<li>Respond to support requests you send us.</li>
+</ul>
+<p>We do not sell, rent, or share your personal information for advertising or marketing. We do not build advertising profiles about you. There are no advertising trackers in the App.</p>
+</section>
+
+<section>
+<h2>4. Data Storage &amp; Security</h2>
+<p>Your data is stored in two places:</p>
+<ul>
+<li>Locally on your device, using SwiftData. This is what makes the App work offline.</li>
+<li>Remotely on Supabase, in their European Union region (Ireland, eu-west-1). Even users outside the EU benefit from EU-grade data protection by default.</li>
+</ul>
+<p>Your remote data is protected by row-level security (RLS), so only your authenticated account can read or write your own rows. All network traffic to our backend is encrypted in transit using TLS. Passwords are hashed using industry-standard algorithms by our authentication provider; we never see or store your plaintext password.</p>
+<p>No system is perfectly secure, and we cannot guarantee absolute security. If we ever discover a breach affecting your data, we will notify you as required by applicable law.</p>
+</section>
+
+<section>
+<h2>5. Third-Party Services</h2>
+<p>To resolve the food descriptions you log into nutritional values, the App sends the food-text strings (and only the food-text strings — never your name, email, or account identifiers) through our backend to the following services:</p>
+<ul>
+<li>USDA FoodData Central — U.S. Department of Agriculture nutrition database. Used for whole foods.</li>
+<li>CalorieNinjas — Nutrition API. Used for restaurant and branded foods.</li>
+<li>Open Food Facts — Open-source packaged-food database.</li>
+<li>Anthropic Claude — Used only to parse your free-text description into structured ingredients. Claude does not invent calorie numbers; nutritional facts always come from the structured databases above.</li>
+</ul>
+<p>The App also uses:</p>
+<ul>
+<li>Supabase — our database, authentication, and serverless function host (the "backend").</li>
+<li>Apple — for App Store / TestFlight delivery, sign-in receipts, and HealthKit (if you enable the integration).</li>
+</ul>
+</section>
+
+<section>
+<h2>6. Apple Health</h2>
+<p>Apple Health integration is optional and disabled by default. If you turn it on, lazyCal may read body mass and active energy values from Apple HealthKit so your weight history and energy expenditure stay in sync. HealthKit data is processed only on your device — we do not copy raw HealthKit data to our servers, and HealthKit data is never used for advertising, profiling, or sharing with third parties. You can revoke HealthKit permission at any time in iOS Settings.</p>
+</section>
+
+<section>
+<h2>7. Your Rights &amp; Data Retention</h2>
+<p>Your account data is retained for as long as your account is active. You may delete your account at any time from Settings → Delete Account; this permanently removes your account, profile, meal logs, weight history, and all associated data from our servers within 30 days. Data you have previously synced into Apple Health remains in Apple Health and is managed by you through the Apple Health app.</p>
+<p>No matter where you live, you have the following rights over your personal data, modelled on the EU General Data Protection Regulation (GDPR):</p>
+<ul>
+<li>Right of access — request a copy of the personal data we hold about you.</li>
+<li>Right to rectification — ask us to correct inaccurate data.</li>
+<li>Right to erasure — delete your account and have your data removed (the Delete Account button does this directly).</li>
+<li>Right to restriction of processing — ask us to stop processing your data in specific ways.</li>
+<li>Right to data portability — receive your data in a machine-readable format.</li>
+<li>Right to object — object to processing where it's based on our legitimate interests.</li>
+<li>Right to withdraw consent — for processing that depends on consent, such as Apple Health integration.</li>
+</ul>
+<p>For California residents, the California Consumer Privacy Act (CCPA) grants the right to know what personal information we collect, the right to delete that information, and the right to opt out of its sale. We do not sell personal information, so the opt-out is satisfied by default; the other rights are exercised via the same mechanisms above.</p>
+<p>To exercise any of these rights, email us at ali.allawi@live.com. We will respond within 30 days.</p>
+</section>
+
+<section>
+<h2>8. Children's Privacy</h2>
+<p>lazyCal is not directed at children under 16, and we do not knowingly collect personal information from children under 16. This aligns with the default age of digital consent under GDPR Article 8. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+</section>
+
+<section>
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time as the App evolves or as the law requires. When we do, we will update the "Last Updated" date at the top. Material changes will be highlighted in the App itself before they take effect. Continued use of the App after the effective date of an updated policy constitutes acceptance of the revised version.</p>
+</section>
+
+<section>
+<h2>10. Contact Us</h2>
+<p>If you have questions or concerns about this Privacy Policy or how your data is handled, please contact:</p>
+<p>Ali Hassan Allawi<br>United Arab Emirates<br>ali.allawi@live.com</p>
+</section>
+
+</div>
+</body>
+</html>
